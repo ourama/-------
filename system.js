@@ -1,4 +1,4 @@
-function butotnClick(){
+function buttonClick(){
     let val = reviewTextarea.value;
     let lines = val.split(/\r\n|\n/);
     let arr = new Array()
@@ -35,13 +35,21 @@ function butotnClick(){
         }
     }
 }
+function resetClick(){
+    for (var i = 0; i < elems.length; i++) {
+        msg[i].innerText = "";
+    }
+}
   
     let reviewTextarea = document.getElementById('reviewTextarea');
     //let msg = document.getElementById('msg');  
-    let msg = document.getElementsByClassName('roleBox');
     let checkButton = document.getElementById('checkButton');
-    checkButton.addEventListener('click', butotnClick);
+    let msg = document.getElementsByClassName('roleBox');
+    checkButton.addEventListener('click', buttonClick);
+    let resetButton = document.getElementById('resetButton');
+    resetButton.addEventListener('click',resetClick);
     let elems = document.getElementsByName("role");
     let tgtDropdownMenu = document.getElementsByName('few');
+
 
 
