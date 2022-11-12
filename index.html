@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang=”ja”>
+<head>
+    <meta charset=”UTF-8″>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css" type="text/css">
+    </title>自動役割分担ツール</title>
+</head>
+
+<div>
+    <label>1行ずつメンバーを入力してください : <br>
+    <textarea id="reviewTextarea"></textarea>
+    </label>
+</div>
+
+<script>
+    function check(){
+        console.log(document.getElementById('member').value);
+    }
+</script>
+<div>
+    <input type="checkbox" id="role1" name="role"checked>
+    <label for="司会">司会</label>
+    <select name="few" id = "few1">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+</div>
+<div>
+    <input type="checkbox" id="role2" name="role">
+    <label for="書記">書記</label>
+    <select name="few" id = "few2">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+</div>
+
+<div>
+    <input type="checkbox" id="role3" name="role">
+    <label for="タイムキーパー">タイムキーパー</label>
+    <select name="few" id = "few3">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+</div>
+
+<div>
+    <input type="checkbox" id="role4" name="role">
+    <label for="監視役">監視役</label>
+    <select name="few" id = "few4">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+</div>
+
+<div>
+    <input type="checkbox" id="role5" name="role">
+    <label for="その他">その他</label>
+    <select name="few" id = "few5">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+</div>
+
+<div><input type="button" value="割り振る" id="checkButton"></div>
+
+<p id="msg"></p>
+
+<div class="boxes">
+    <div class="box" ><p><b>司会</b></p><p class = roleBox id =roleBox1></p></div>
+    <div class="box" ><p><b>書記</b></p><p class = roleBox id =roleBox2></p></div>
+    <div class="box" ><p><b>ﾀｲﾑｷｰﾊﾟｰ</b></p><p class = roleBox id =roleBox3></p></div>
+    <div class="box" ><p><b>監視</b></p><p class = roleBox id =roleBox4></p></div>
+    <div class="box" id = box5 ><p><b>その他</b></p><p class = roleBox id =roleBox5></p></div>
+</div>
+
+<div><input type="button" value="リセット" id="resetButton"></div>
+
+<script type="module" src="system.js"></script>
+</html>
