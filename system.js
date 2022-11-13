@@ -24,20 +24,25 @@ function buttonClick(){
         console.log(elems[i].checked);
         console.log(tgtDropdownMenu[i].value);
         if (elems[i].checked){
-            let ran = Math.floor(Math.random()*randomNumber);
-            console.log(ran);
-            let rep = arr[ran];
-            console.log(rep);
-            arr.splice(ran,1);
-            randomNumber = randomNumber-1;
+            while(tgtDropdownMenu[i].value>0){
+                let ran = Math.floor(Math.random()*randomNumber);
+                console.log(ran);
+                rep = rep +arr[ran]+ "\n" ;
+                console.log(rep);
+                arr.splice(ran,1);
+                randomNumber = randomNumber-1;
+                //msg.innerText = rep;
+                tgtDropdownMenu[i].value=tgtDropdownMenu[i].value-1
+            }
             msg[i].innerText = rep;
-            //msg.innerText = rep;
+            rep = ""
         }
     }
 }
 function resetClick(){
     for (var i = 0; i < elems.length; i++) {
         msg[i].innerText = "";
+    rep = ""
     }
 }
   
@@ -50,6 +55,7 @@ function resetClick(){
     resetButton.addEventListener('click',resetClick);
     let elems = document.getElementsByName("role");
     let tgtDropdownMenu = document.getElementsByName('few');
+    let rep = "";
 
 
 
