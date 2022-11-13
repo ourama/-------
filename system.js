@@ -43,6 +43,7 @@ function resetClick(){
     for (var i = 0; i < elems.length; i++) {
         msg[i].innerText = "";
     rep = ""
+    tgtDropdownMenu[i].value = 1
     }
 }
   
