@@ -10,8 +10,8 @@ function buttonClick(){
         }
         arr.push( lines[i] );
     }
-    console.log(val);
-    console.log(arr);
+    //console.log(val);
+    //console.log(arr);
 
     let randomNumber = arr.length;
 
@@ -35,7 +35,10 @@ function buttonClick(){
                 tgtDropdownMenu[i].value=tgtDropdownMenu[i].value-1
             }
             msg[i].innerText = rep;
-            rep = ""
+            rep = "";
+        } else{
+            rep = "";
+            msg[i].innerText = rep;
         }
     }
 }
