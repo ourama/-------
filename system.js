@@ -50,6 +50,14 @@ function resetClick(){
     reviewTextarea.value = "";
     }
 }
+
+function roleresetClick(){
+    for (var i = 0; i < elems.length; i++) {
+        msg[i].innerText = "";
+    rep = ""
+    tgtDropdownMenu[i].value = 1;
+    }
+}
   
     let reviewTextarea = document.getElementById('reviewTextarea');
     //let msg = document.getElementById('msg');  
@@ -58,6 +66,8 @@ function resetClick(){
     checkButton.addEventListener('click', buttonClick);
     let resetButton = document.getElementById('resetButton');
     resetButton.addEventListener('click',resetClick);
+    let roleresetButton = document.getElementById('roleresetButton');
+    roleresetButton.addEventListener('click',roleresetClick);
     let elems = document.getElementsByName("role");
     let tgtDropdownMenu = document.getElementsByName('few');
     let rep = "";

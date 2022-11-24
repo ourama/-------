@@ -6,14 +6,14 @@ textarea{
     display:flex;
     max-width: 500px;
     margin-right:auto;
-    background-color: #ccc;
+    background-color: white;
   }
   
 .box{
     vertical-align: bottom;
     border: 1px solid #333;
     border-right: none;
-    background-color: #ccc;
+    background-color: white;
     width: 100px;
     height: 150px;
     float:left;
