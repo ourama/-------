@@ -45,6 +45,7 @@ function buttonClick(){
 function resetClick(){
     for (var i = 0; i < elems.length; i++) {
         msg[i].innerText = "";
+        elems[i].checked=false;
     rep = ""
     tgtDropdownMenu[i].value = 1;
     reviewTextarea.value = "";
@@ -54,6 +55,7 @@ function resetClick(){
 function roleresetClick(){
     for (var i = 0; i < elems.length; i++) {
         msg[i].innerText = "";
+        elems[i].checked=false;
     rep = ""
     tgtDropdownMenu[i].value = 1;
     }
