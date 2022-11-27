@@ -15,3 +15,5 @@ https://ourama.github.io/separation-tool/
 ## これからの改善点
 UIを分かりやすく、見えやすく改善します。
 名前以外をリセットするボタンを作成します。
+## DEMO
+Uploading 画面収録 2022-11-28 0.43.14.mov…
