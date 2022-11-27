@@ -14,6 +14,7 @@ https://ourama.github.io/separation-tool/
 また、HTMLとCSS、JavaScript（DOM操作）について学んでいたため、これらのアウトプットとしてWebサイトを作成しました。
 ## これからの改善点
 UIを分かりやすく、見えやすく改善します。
-名前以外をリセットするボタンを作成します。
+チェックボックスの判定範囲を変更します。
+チーム分けや指名などの機能も追加したいです。
 ## DEMO
 https://user-images.githubusercontent.com/103622554/204144733-cc6f586d-5af5-40de-a596-79e2e6832f34.mov
