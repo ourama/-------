@@ -16,5 +16,5 @@ https://ourama.github.io/separation-tool/
 UIを分かりやすく、見えやすく改善します。
 チェックボックスの判定範囲を変更します。
 チーム分けや指名などの機能も追加したいです。
-## DEMO
+## Demo
 https://user-images.githubusercontent.com/103622554/204144733-cc6f586d-5af5-40de-a596-79e2e6832f34.mov
