@@ -52,7 +52,7 @@ function resetClick(){
     }
 }
 
-function roleresetClick(){
+function roleResetClick(){
     for (var i = 0; i < elems.length; i++) {
         msg[i].innerText = "";
         elems[i].checked=false;
@@ -68,8 +68,8 @@ function roleresetClick(){
     checkButton.addEventListener('click', buttonClick);
     let resetButton = document.getElementById('resetButton');
     resetButton.addEventListener('click',resetClick);
-    let roleresetButton = document.getElementById('roleresetButton');
-    roleresetButton.addEventListener('click',roleresetClick);
+    let roleResetButton = document.getElementById('roleResetButton');
+    roleResetButton.addEventListener('click',roleResetClick);
     let elems = document.getElementsByName("role");
     let tgtDropdownMenu = document.getElementsByName('few');
     let rep = "";
