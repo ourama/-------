@@ -1,7 +1,8 @@
 function buttonClick(){
     let val = reviewTextarea.value;
     let lines = val.split(/\r\n|\n/);
-    let arr = new Array()
+    let arr = new Array();
+    let keepTDMenu = new Array(1, 1, 1, 1, 1);//人数指定保存用
     //msg.innerText = val;
     for ( var i = 0; i < lines.length; i++ ) {
         // 空行は無視する
@@ -16,19 +17,16 @@ function buttonClick(){
     let randomNumber = arr.length;
 
     for (var i = 0; i < elems.length; i++) {
-        console.log(elems[i].checked);
-        console.log(tgtDropdownMenu[i].value);
-    
-    } // end for i
-    for (var i = 0; i < elems.length; i++) {
-        console.log(elems[i].checked);
-        console.log(tgtDropdownMenu[i].value);
+        //console.log(elems[i].checked);
+        //console.log(tgtDropdownMenu[i].value);
         if (elems[i].checked){
+            keepTDMenu[i] = tgtDropdownMenu[i].value;
+            //console.log(keepTDMenu[i]);
             while(tgtDropdownMenu[i].value>0){
                 let ran = Math.floor(Math.random()*randomNumber);
-                console.log(ran);
+                //console.log(ran);
                 rep = rep +arr[ran]+ "\n" ;
-                console.log(rep);
+                //console.log(rep);
                 arr.splice(ran,1);
                 randomNumber = randomNumber-1;
                 //msg.innerText = rep;
@@ -36,6 +34,8 @@ function buttonClick(){
             }
             msg[i].innerText = rep;
             rep = "";
+            tgtDropdownMenu[i].value=keepTDMenu[i]
+            //console.log(tgtDropdownMenu[i]);
         } else{
             rep = "";
             msg[i].innerText = rep;
@@ -60,6 +60,7 @@ function roleResetClick(){
     tgtDropdownMenu[i].value = 1;
     }
 }
+
   
     let reviewTextarea = document.getElementById('reviewTextarea');
     //let msg = document.getElementById('msg');  
