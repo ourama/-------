@@ -61,11 +61,28 @@ function roleResetClick(){
     }
 }
 
+function toTextClick(){
+    var copyTarget = "今回の進行は";
+    for (var i = 0; i < elems.length; i++) {
+        if (elems[i].checked){
+        copyTarget += roleName[i] +"が" + msg[i].innerText;
+        }
+    }
+    copyTarget += "になります。よろしくお願いします。";
+    copyTarget = copyTarget.replace(/\r?\n/g,"、");
+    // 選択しているテキストをクリップボードにコピーする
+    navigator.clipboard.writeText(copyTarget)
+    .then(() => { alert(copyTarget + 'がコピーできました！') })
+    .catch((error) => { alert(error) });
+}
+
   
     let reviewTextarea = document.getElementById('reviewTextarea');
     //let msg = document.getElementById('msg');  
     let checkButton = document.getElementById('checkButton');
     let reAssignButton = document.getElementById('reAssign');
+    let toTextButton = document.getElementById('toText');
+    toTextButton.addEventListener('click', toTextClick);
     let msg = document.getElementsByClassName('roleBox');
     checkButton.addEventListener('click', buttonClick);
     reAssignButton.addEventListener('click', buttonClick);
@@ -76,6 +93,7 @@ function roleResetClick(){
     let elems = document.getElementsByName("role");
     let tgtDropdownMenu = document.getElementsByName('few');
     let rep = "";
+    let roleName = ['司会', '書記', 'タイムキーパー', '監視', 'その他'];
 
 'use strict';
 {
