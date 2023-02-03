@@ -80,20 +80,27 @@
     </select>
 </div>
 
-<div><input type="button" value="割り振る" id="checkButton"></div>
+<div><input type="button" class = "assign" value="割り振る" id="checkButton"></div>
 
 <p id="msg"></p>
+<div id = "mask" class = "hidden"></div>
+<section id = "modal" class = "hidden">
+    <div class="boxes">
+        <div class="box" ><p><b>司会</b></p><p class = roleBox id =roleBox1></p></div>
+        <div class="box" ><p><b>書記</b></p><p class = roleBox id =roleBox2></p></div>
+        <div class="box" ><p><b>ﾀｲﾑｷｰﾊﾟｰ</b></p><p class = roleBox id =roleBox3></p></div>
+        <div class="box" ><p><b>監視</b></p><p class = roleBox id =roleBox4></p></div>
+        <div class="box" id = box5 ><p><b>その他</b></p><p class = roleBox id =roleBox5></p></div>
+    </div>
+    <div>
+        <button id="close">閉じる</button>
+        <button class = "assign" id = "reAssign">もう１度割り振る</button>
+    </div>
+</section>
 
-<div class="boxes">
-    <div class="box" ><p><b>司会</b></p><p class = roleBox id =roleBox1></p></div>
-    <div class="box" ><p><b>書記</b></p><p class = roleBox id =roleBox2></p></div>
-    <div class="box" ><p><b>ﾀｲﾑｷｰﾊﾟｰ</b></p><p class = roleBox id =roleBox3></p></div>
-    <div class="box" ><p><b>監視</b></p><p class = roleBox id =roleBox4></p></div>
-    <div class="box" id = box5 ><p><b>その他</b></p><p class = roleBox id =roleBox5></p></div>
-</div>
-
-<div><input type="button" value="リセット" id="resetButton"></div>
-<div><input type="button" value="名前を残してリセット" id="roleResetButton"></div>
+<div>
+    <input type="button" value="リセット" id="resetButton">
+    <input type="button" value="名前を残してリセット" id="roleResetButton"></div>
 
 </body>
 

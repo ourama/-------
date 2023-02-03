@@ -65,8 +65,10 @@ function roleResetClick(){
     let reviewTextarea = document.getElementById('reviewTextarea');
     //let msg = document.getElementById('msg');  
     let checkButton = document.getElementById('checkButton');
+    let reAssignButton = document.getElementById('reAssign');
     let msg = document.getElementsByClassName('roleBox');
     checkButton.addEventListener('click', buttonClick);
+    reAssignButton.addEventListener('click', buttonClick);
     let resetButton = document.getElementById('resetButton');
     resetButton.addEventListener('click',resetClick);
     let roleResetButton = document.getElementById('roleResetButton');
@@ -75,5 +77,24 @@ function roleResetClick(){
     let tgtDropdownMenu = document.getElementsByName('few');
     let rep = "";
 
-
+'use strict';
+{
+    const open = document.getElementById('checkButton');
+    const close = document.getElementById('close');
+    const modal = document.getElementById('modal');
+    const mask = document.getElementById('mask');
+    
+    open.addEventListener('click', function () {
+        modal.classList.remove('hidden');
+        mask.classList.remove('hidden');
+    });
+    close.addEventListener('click', function () {
+        modal.classList.add('hidden');
+        mask.classList.add('hidden');
+    });
+    mask.addEventListener('click', function () {
+        modal.classList.add('hidden');
+        mask.classList.add('hidden');
+    });
+}
 
