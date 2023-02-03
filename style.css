@@ -3,6 +3,7 @@ body{
   margin: auto;
   text-align: center; 
 }
+
 textarea{
     width:20em;
     height:15em;
@@ -13,12 +14,13 @@ textarea{
     max-width: 500px;
     margin:  0 auto;  
     align-items: center;
+    border-radius: 0.4em;
     background-color: white;
   }
   
 .box{
     vertical-align: bottom;
-    border: 1px solid #333;
+    border: 1px solid #bbb;
     border-right: none;
     background-color: white;
     width: 100px;
@@ -27,7 +29,7 @@ textarea{
   }
 
 #box5{
-    border-right: 1px solid #333;
+    border-right: 1px solid #bbb;
   }
 #checkButton,
 #close,
@@ -35,12 +37,16 @@ textarea{
 #resetButton,
 #roleResetButton {
   cursor: pointer;
-  border: 1px solid #ccc;
+  border: 1px solid #bbb;
   border-radius: 4px;
   padding: 12px;
   margin: 16px auto 0;
   background: #4caf50;
   color: white;
+}
+#resetButton,
+#close{
+  background: #3399CC;
 }
 #mask {
   background: rgba(0, 0, 0, 0.4);
@@ -54,10 +60,10 @@ textarea{
   
 #modal {
   background: #fff;
-  color: #555;
+  color: black;
   max-width: 23em;
   padding: 3em;
-  border-radius: 4px;
+  border-radius: 0.4em;
   position: absolute;
   top: 50%;
   left: 50%;
