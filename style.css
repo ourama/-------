@@ -54,7 +54,7 @@ textarea{
 #modal {
   background: #fff;
   color: #555;
-  max-width: 800px;
+  max-width: 23em;
   padding: 3em;
   border-radius: 4px;
   position: absolute;
